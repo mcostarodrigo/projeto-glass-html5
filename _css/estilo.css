@@ -1,0 +1,244 @@
+@charset"UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@font-face{
+	font-family:'FonteLogo';
+	src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+	body{
+			font-family:Arial, sans-serif;
+			background-color:#dddddd;
+			color: rgba(0,0,0,1);	
+	}
+/* Trabalhar com a <div id="interface"> demarcador colocado no html.*/
+	
+div#interface{
+	width:900px; /*Defindo largura do corpo*/
+	background-color:#ffffff; /*Definindo a interface com fundo branco*/
+	margin: -20px auto 0px auto; /*Defindo margem da <div>*, a margem é definida no sentido horário - Aula 15*/
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+	padding:10px 10px 10px 10px; /*Configurando pro texto não ficar colado na margem interna, como todos os valores são iguais, uma outra opção seria colocar "padding: 10px", sem aspas, que o resultado seria o mesmo. */
+		}
+		
+		p {
+			text-align: justify;
+			text-indent: 50px
+		}
+		
+		a {  /*Aqui estamos deixando os links do site em cinza escuro*/
+			color:#606060;
+			text-decoration:none;
+		}
+		
+		a:hover{ /*Configurando para que quando o usuário passe o mouse sobre o link, o mesmo fique sublinhado*/
+			text-decoration:underline;
+		}
+		
+header#cabecalho img#icone { /* Colocando o icone do óculos no canto superior direito, para isso foi colocado uma id= na imagem no index, e a configuração está sendo feita por aqui*/
+	position:absolute;
+	left:1050px;
+	top:80px;
+}
+
+header#cabecalho {
+	border-bottom:1px #606060 solid; /*Aqui é configurada a 01. expessura da borda. 02. a cor da borda. 03. O formato da borda.*/
+	height:150px; /*Defindo altura do cabeçalho*/
+	background:url("../_imagens/glass-logo-peq.jpg")no-repeat 0px 80px; /*O comando " .. " sem aspas, faz com que o buscador volte para o documento anterior, onde está localizado o caminho correto para o endereço do arquivo. Foi colocado "no-repeat"  sem aspas para que a imagem que é pequena não sejá repetida, encenhendo o background. Depois foi anexado o posicionamento da imagem, no caso "0 px e 80px".*/
+}
+		
+header#cabecalho h1 { /*Configurando cabeçalho para todo objeto h1*/
+	font-family:'FonteLogo', sans-serif;
+	font-size:30pt;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	padding:0px;
+	margin-bottom:0px; /*Esse comando altera somente a margem inferior*/
+}
+header#cabecalho h2 {
+	font-family: 'Titillium Web', sans-serif;
+	color:#888888;
+	font-size:15px;
+	padding:0px;
+	margin-top:0px; /*Esse comando altera somente a margem superior*/
+}
+		
+		
+	/* Formatação de imagens com legendas*/
+figure.foto-legenda{
+	position: relative;
+	border:8px solid white;
+	box-shadow:1px 1px 4px black;
+}
+figure.foto-legenda img {
+	width: 100%;
+	height: 100%;
+}
+figure.foto-legenda figcaption{
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	background-color:rgba(0,0,0,.4);
+	color:white;
+	width:100%;
+	height:100%;
+	padding: 10px;
+	box-sizing:border-box;
+	transition: opacity 1s;
+}
+figure.foto-legenda:hover figcaption {
+	opacity:1;
+}
+/*Formatação do menu*/
+
+nav#menu {
+	display:block;
+	
+}
+nav#menu ul {
+	list-style: none;
+	text-transform:uppercase;
+	position:absolute;
+	top:-20px;
+	left: 500px;
+}
+nav#menu li{
+	display:inline-block;	
+	background-color:#dddddd;
+	padding:10px;
+	margin:2px;
+	transition:background-color 1s; /*Faz com que leve um segundo para a cor do botão mudar*/
+}
+/* Botão menu muda de cor quando se passa o mouse*/
+nav#menu li:hover {
+	background-color:#606060;
+}
+
+/* Botão menu sem indicação de número ou marcadores*/
+nav#menu h1 {
+	display:none;
+}
+/* Alterando o modelo do menu superior*/
+nav#menu a {  
+	color:#000000;
+	text-decoration:none; /*text.decoration:none; vai retirar o sublinhado do link */
+} /* O "a" é uma ancora... */
+
+	/*Abaixo comando para mudar a cor do menu quando o mouse passar, deixando a letra com a cor branca
+	e fundo escuro*/
+	
+nav#menu a:hover  {
+	color: #ffffff;	
+	text-decoration:underline;
+	}
+section#corpo {  /*Definindo as divisões na página, conforme index*/
+	display:block;
+	width:500px;
+	float:left; /* Defindo que essa seção ficará do lado esquerdo, isso só é possível por conta da configuração em blocos.*/
+	border-right:1px solid #606060; /*Aqui está sendo configurada a linha que está na parte do meio do site, na vertical*/
+	padding-right:15px;
+}
+article#noticia-principal h2 { /* Aqui estamos formatando tudo o que está dentro de <article...>*/
+	font-size: 13pt;
+	color: #606060;
+	background-color: #dddddd;
+	padding:5px 0px 5px 0px;
+	margin:10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1{ /*formatando o cabeçalho do atigo, sereferindo a ele por #cabacalho-artigo.*/
+	font-family:'FonteLogo', sans-serif;
+	font-size:20pt;
+	color: #606060;
+	margin-bottom: 0px;
+	margin-top:0px;
+}
+
+.direita { /*Aqui estamos formatando a classe direita conforme consta no html. */
+	text-align: right;
+}
+
+header#cabecalho-artigo h2{
+	font-size:13pt;
+	color:#cecece;
+	background-color:#ffffff;
+	margin: 0px;
+}
+
+header#cabecalho-artigo h3{
+	font-size:12px;
+	color:#606060;
+}
+
+table#tabelaspec { /* Colocando a borda da tabela*/
+	border:1px solid #606060;
+	border-spacing:  0px; /*Esse comando vai retirar as bordas de cada célula*/
+	margin-left: auto; /*Esse comando centraliza os valores da tabela*/
+	margin-right:auto;
+}
+
+table#tabelaspec td { /*Nesse caso vai configurar tudo o que for "td"*/
+	border: 1px solid #606060;
+	padding: 10px; /* Espaço interno entre os objetos*/
+	text-align:center; /*Alinahmento do texto na tabela*/
+	vertical-align:middle;
+}
+
+table#tabelaspec td.ce {  /*Nesse caso estamos formatando todo "td" da classe "ce" por isso "td.ce".*/
+	color: #ffffff;
+	background-color:#606060;
+	vertical-align:top;
+	font-weight:bold;
+}
+
+table#tabelaspec td.cd { /*Nesse caso estamos formatando todo "td" da classe "ce" por isso "td.cd".*/
+	background-color:#cecece;
+}
+
+table#tabelaspec caption { /*Formatação para tabela spec para tudo que for caption*/
+	color: #888888; /*Cor da letra*/
+	font-size:13pt; /*Tamanho da letra*/
+	font-weight:bolder; /*negrito*/
+}
+
+table#tabelaspec caption span { /*configurando "Mar/2013", para isso esse conteudo foi colocado em <span> no html, ou sejá, estamos configurando tudo que é caption e span.*/
+	display:block;
+	float:right;
+	color:#000000;
+	font-size:8pt;
+	margin-top:10px;
+}
+	
+aside#lateral {
+	display:block;
+	width:330px;
+	float:right; /* Defindo que essa seção ficará do lado direito, isso só é possível por conta da configuração em blocos.*/
+	background-color:#dddddd; /*Definindo cor de fundo do aside lateral*/
+	padding:20px;
+	margin-top:5px;
+	box-shadow:2px 2px 2px rgba(0,0,0, .5); /*Colocando a sombra no bloco*/
+
+}
+aside#lateral h1{
+	font-family:'FonteLogo', sans-serif;
+	font-size: 20pt;
+	color:#606060;
+	padding:10px;
+
+}
+
+aside#lateral h2{
+	background-color:#606060;
+	font-size:13pt;
+	color:#ffffff;
+	padding: 5px;
+}	
+
+
+footer#rodape {
+	clear:both; /*Vai ajudar a limpar os dois blocos flutuantes*/
+	border-top:1px solid #606060;
+}
+
+footer#rodape p { /* Em outras palavras no footer chamado rodape tudo o que for parágrafo*/
+	text-align:center; /*Vai deixar o parágrafo de rodapé no centro*/
+}
